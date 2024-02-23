@@ -56,8 +56,6 @@
 }
 
 .header {
-  display: grid;
-  align-items: center;
   padding: 20px 20px 20px 0;
 }
 
@@ -123,6 +121,9 @@
   height: 25px;
   width: 25px;
   border: 1px solid var(--secondary-color, #ff0070);
+  border-width: 1px 1px 0 0;
+  top: 20px;
+  right: 20px;
 }
 
 .decorated-zone::after {
@@ -131,22 +132,9 @@
   z-index: -1;
   height: 25px;
   width: 25px;
-  border: 1px solid var(--secondary-color, #ff0070);
-}
-
-.decorated-zone::before {
-  border-width: 1px 1px 0 0;
-  top: 20px;
-  right: 20px;
-}
-
-.decorated-zone::after {
   border-width: 0 0 1px 1px;
   left: 20px;
   bottom: 0;
-}
-
-.decorated-zone::after {
   border-inline-start: 1px solid var(--secondary-color, #ff0070);
   border-block-end: 1px solid var(--secondary-color, #ff0070);
   inset-inline-start: clamp(10px, 0.0286rem + 2.5445vw, 20px);
