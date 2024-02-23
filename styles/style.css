@@ -156,6 +156,7 @@
   background-color: var(--accent-color);
   color: var(--highlight-color);
   font-size: 18px;
+  font-weight: 700;
   line-height: 23.4px;
   justify-self: end;
   margin-left: 20px;
@@ -172,7 +173,7 @@
 
 .section {
   display: grid;
-  gap: 16px;
+  gap: 20px;
   grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
 }
 
@@ -263,7 +264,6 @@
     "cassette books food"
     "cassette road road";
   gap: 20px;
-  padding-block-start: 10px;
 }
 
 .gallery-list_item-img {
@@ -306,7 +306,7 @@
   justify-content: center;
   align-content: center;
   margin-block-start: 58px;
-  padding-block-start: 210px;
+  padding-block-start: 206px;
 }
 
 .footer-title {
@@ -394,34 +394,55 @@
   .header-text {
     margin-inline-start: 0px;
     max-width: 100%;
-    margin-block-end: 30px;
+    margin-block-end: 40px;
   }
 
   .header {
     padding-left: 10px;
   }
+
+  .main {
+    gap: 50px;
+  }
   .section {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
-  .section-gallery {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+  .section-articles,
+  .gallery-lists {
+    gap: 10px;
   }
+
   .section-difficult_focus {
-    margin-block-start: 10px;
     flex-direction: column;
   }
+
   .section-low_focus-articles {
     display: flex;
     flex-direction: column;
   }
+
   .title-low_focus {
     padding-top: 20px;
     width: 100%;
   }
 
+  .section-gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .gallery-lists {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-list_item-img {
+    display: block;
+  } 
+  
   .footer-title {
     margin-block-start: 250px;
     margin-right: 15px;
@@ -430,11 +451,4 @@
     text-shadow: 2px 2px 0 var(--accent-color);
   }
 
-  .gallery-lists {
-    display: flex;
-    flex-direction: column;
-  }
-  .gallery-list_item-img {
-    display: block;
-  }
 }
