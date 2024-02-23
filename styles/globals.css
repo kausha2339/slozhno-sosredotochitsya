@@ -4,9 +4,11 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
 }
 
 body {
+  font-family: var(--font-family, "IBM Plex mono", sans-serif);
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;

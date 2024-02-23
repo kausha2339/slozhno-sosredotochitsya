@@ -5,8 +5,30 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --text-color: var(--color-text-pink, #f1b2ce);
+  --brand-color: var(--color-brand-purple, #db00ff);
+  --secondary-color: var(--color-second-purple, #ff0070);
+  --secondary-color-dark: var(--color-dark-purple, #ff007040);
+  --accent-color: var(--color-accent-purple, #ff0070);
+  --highlight-color: var(--color-high-black, #000028);
+  --page-background-color: var(--default-color, #191970);
+  --page-background-image: url("../images/cover-image-dark.png");
+
+  --rec-visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header_rec {
+    visibility: var(--rec-visibility);
+  }
+  :root {
+    --text-color: var(--color-text-pink, #f1b2ce);
+    --brand-color: var(--color-brand-purple, #db00ff);
+    --secondary-color: var(--color-second-purple, #ff0070);
+    --secondary-color-dark: var(--color-dark-purple, #ff007040);
+    --accent-color: var(--color-accent-purple, #ff0070);
+    --highlight-color: var(--color-high-black, #000028);
+    --page-background-color: var(--color-high-black, #000028);
+    --page-background-image: url("../images/cover-image-dark.png");
+  }
 }
