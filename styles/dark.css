@@ -11,7 +11,7 @@
   --secondary-color-dark: var(--color-dark-purple, #ff007040);
   --accent-color: var(--color-accent-purple, #ff0070);
   --highlight-color: var(--color-high-black, #000028);
-  --page-background-color: var(--default-color, #191970);
+  --page-background-color: var(--default-color,#000028);
   --page-background-image: url("../images/cover-image-dark.png");
 
   --rec-visibility: visible;

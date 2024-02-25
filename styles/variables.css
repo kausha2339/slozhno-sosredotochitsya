@@ -9,14 +9,14 @@
   --color-brand-pink: #ffc2e6;
   --color-accent-pink: #ff8dcb;
 
-  --default-color: #191970;
+  --default-color: #000028;
 
   --color-brand-purple: #db00ff;
   --color-second-purple: #ff0070;
   --color-dark-purple: #ff007040;
 
   --color-high-black: #000028;
-  --color-main-black: #353430;
+  --color-light-black: #353430;
   --color-black-dark: #35343040;
     
   --text-color: var(--color-text-pink, #f1b2ce);
@@ -26,10 +26,11 @@
   --accent-color: var(--color-second-purple, #ff0070);
   --highlight-color: var(--color-main-black, #000028);
 
-  --font-family: "IBM Plex mono", sans-serif;
+  --font-family: "IBM Plex mono", monospace;
+  --page-font-size-title: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
   --page-background-image: url("../images/cover-image.png");
 
-  --page-background-color: var(--default-color, #191970);
+  --page-background-color: var(--default-color, #000028);
 
   --rec-visibility: visible;
 }

@@ -5,11 +5,11 @@
 */
 
 .page.theme_light {
-  --text-color: var(--color-main-black, #353430);
+  --text-color: var(--color-light-black, #353430);
   --accent-color: var(--color-accent-pink, #ff8dcb);
   --brand-color: var(--color-brand-pink, #ffc2e6);
-  --highlight-color: var(--color-main-black, #353430);
-  --secondary-color: var(--color-main-black, #353430);
+  --highlight-color: var(--color-light-black, #353430);
+  --secondary-color: var(--color-light-black, #353430);
   --secondary-color-dark: var(--color-dark-black, #35343040);
   --page-background-color: var(--cover-color, #fff1f7);
   --page-background-image: url("../images/cover-image-light.png");
@@ -17,7 +17,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .header_rec {
+  .page.theme_auto .header_rec {
     visibility: var(--rec-visibility);
   }
   :root {
@@ -29,7 +29,11 @@
     --secondary-color-dark: var(--color-second-black, #35343040);
     --page-background-color: var(--cover-color, #fff1f7);
     --page-background-image: url("../images/cover-image-light.png");
-    --page-background-color: var(--default-color, #191970);
-    --rec-decor-visibility: hidden;
+    --page-background-color: var(--default-color: #000028);
+    --rec-visibility: hidden;
   }
 }
+  .page.theme_light .header_rec {
+    visibility: var(--rec-visibility);
+  }
+
