@@ -6,7 +6,7 @@
 
 .page.theme_light {
   --text-color: var(--color-light-black, #353430);
-  --accent-color: var(--color-accent-pink, #ff8dcb);
+  --accent-color: var( --color-accent-pink, #ff8dcb);
   --brand-color: var(--color-brand-pink, #ffc2e6);
   --highlight-color: var(--color-light-black, #353430);
   --secondary-color: var(--color-light-black, #353430);
@@ -21,11 +21,11 @@
     visibility: var(--rec-visibility);
   }
   :root {
-    --text-color: var(--color-main-black, #353430);
-    --accent-color: var(--color-accent-pink, #ff8dcb);
+    --text-color: var(--color-light-black, #353430);
+    --accent-color: var( --color-accent-pink, #ff8dcb);
     --brand-color: var(--color-brand-pink, #ffc2e6);
-    --highlight-color: var(--color-main-black, #353430);
-    --secondary-color: var(--color-main-black, #353430);
+    --highlight-color: var(--color-light-black, #353430);
+    --secondary-color: var(--color-light-black, #353430);
     --secondary-color-dark: var(--color-second-black, #35343040);
     --page-background-color: var(--cover-color, #fff1f7);
     --page-background-image: url("../images/cover-image-light.png");
