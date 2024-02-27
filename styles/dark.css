@@ -18,9 +18,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .header_rec {
-    visibility: var(--rec-visibility);
-  }
   :root {
     --text-color: var(--color-text-pink, #f1b2ce);
     --brand-color: var(--color-brand-purple, #db00ff);
@@ -30,5 +27,6 @@
     --highlight-color: var(--color-high-black, #000028);
     --page-background-color: var(--color-high-black, #000028);
     --page-background-image: url("../images/cover-image-dark.png");
+    --rec-visibility: var(--rec-visibility, visible)
   }
 }

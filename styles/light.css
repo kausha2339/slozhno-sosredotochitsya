@@ -17,9 +17,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .page.theme_auto .header_rec {
-    visibility: var(--rec-visibility);
-  }
+
   :root {
     --text-color: var(--color-light-black, #353430);
     --accent-color: var( --color-accent-pink, #ff8dcb);
@@ -30,10 +28,7 @@
     --page-background-color: var(--cover-color, #fff1f7);
     --page-background-image: url("../images/cover-image-light.png");
     --page-background-color: var(--default-color: #000028);
-    --rec-visibility: hidden;
+    --rec-visibility: var(--rec-visibility, hidden);
   }
 }
-  .page.theme_light .header_rec {
-    visibility: var(--rec-visibility);
-  }
 
