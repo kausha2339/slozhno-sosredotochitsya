@@ -162,7 +162,8 @@
 }
 
 .main {
-  padding: 60px 20px 80px 20px;
+  margin-block-start: 60px;
+  padding: 0px 20px 0px 20px;
 }
 .section {
   gap: 20px;
@@ -171,27 +172,28 @@
 }
 
 .section-articles {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 23px;
   text-align: left;
-  letter-spacing: 0rem;
   gap: 20px;
   padding-block-end: 80px;
+  margin-block-end: 1.27rem;
 }
 
 .section-article {
+  font-family: "IBM Plex mono", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  line-height: 23.5px;
   flex-direction: column;
   display: grid;
   color: var(--text-color);
-  gap: 20px;
+  gap: 2px;
 }
 
 .title-list {
   color: var(--secondary-color);
   font-style: normal;
   font-size: 18px;
-  line-height: 23.4px;
   font-weight: 700;
   max-width: 315px;
 }
@@ -200,18 +202,15 @@
   background-color: var(--accent-color);
   color: var(--highlight-color);
   font-size: 18px;
-  line-height: 23.4px;
+  line-height: 23.5px;
   font-weight: 700;
 }
 
-.accent-text {
-  font-size: 18px;
-  line-height: 23.4px;
-  font-weight: 400;
-}
-
 .section-title_accent {
+  font-size: 18px;
   font-weight: 400;
+  font-family: "IBM Plex mono", monospace;
+  line-height: 23.5px;
 }
 
 .link:hover {
@@ -246,6 +245,9 @@
 .section-advices_focus-title {
   background-color: var(--accent-color);
 
+}
+.text-section {
+  padding-block-end: 20px;
 }
 
 .section-gallery {
