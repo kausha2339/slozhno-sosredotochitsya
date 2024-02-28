@@ -5,30 +5,29 @@
 */
 
 .page.theme_light {
-  --text-color: var(--color-light-black, #353430);
-  --accent-color: var( --color-accent-pink, #ff8dcb);
+  --title-color: var(--color-light-black, #353430);
+  --accent-color: var(--color-accent-light, #ff8dcb);
   --brand-color: var(--color-brand-pink, #ffc2e6);
   --highlight-color: var(--color-light-black, #353430);
-  --secondary-color: var(--color-light-black, #353430);
-  --secondary-color-dark: var(--color-dark-black, #35343040);
+  --text-color: var(--color-light-black, #353430);
+  --menu-color: var(--color-button-black, #35343040);
   --page-background-color: var(--cover-color, #fff1f7);
   --page-background-image: url("../images/cover-image-light.png");
-  --rec-visibility: hidden;
+  --rec-visibility: var(--rec-visibility-light, hidden);
 }
 
 @media (prefers-color-scheme: light) {
 
   :root {
-    --text-color: var(--color-light-black, #353430);
+    --title-color: var(--color-light-black, #353430);
     --accent-color: var( --color-accent-pink, #ff8dcb);
     --brand-color: var(--color-brand-pink, #ffc2e6);
     --highlight-color: var(--color-light-black, #353430);
-    --secondary-color: var(--color-light-black, #353430);
-    --secondary-color-dark: var(--color-second-black, #35343040);
+    --text-color: var(--color-light-black, #353430);
+    --menu-color: var(--color-button-black, #35343040);
     --page-background-color: var(--cover-color, #fff1f7);
     --page-background-image: url("../images/cover-image-light.png");
-    --page-background-color: var(--default-color: #000028);
-    --rec-visibility: var(--rec-visibility, hidden);
+    --rec-visibility: var(--rec-visibility-light, hidden);
   }
 }
 

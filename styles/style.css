@@ -7,7 +7,7 @@
   color: var(--brand-color, #f1b2ce);
   font-family: "IBM Plex mono", monospace;
   background-color: var(--cover-color, #fff1f7);
-  background-image: var(--page-background-image, url "../images/cover-image.png", #000028);
+  background-image: var(--page-background-image,  url "../images/cover-image.png",#000028 );
   background-attachment: fixed;
   background-size: cover;
 }
@@ -32,7 +32,7 @@
   align-items: center;
   position: absolute;
   z-index: -1;
-  visibility: var(--rec-visibility, visible);
+  visibility: var(--rec-visibility, hidden);
   top: 20px;
   right: 28px;
   gap: 10px;
@@ -85,7 +85,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  color: var(--secondary-color);
+  color: var(--secondary-color, #ff0070);
   background: transparent;
   cursor: pointer;
 }
@@ -119,7 +119,7 @@
   z-index: -1;
   height: 25px;
   width: 25px;
-  border: 1px solid var(--secondary-color, #ff0070);
+  border: 1px solid var(--accent-color);
   border-width: 1px 1px 0 0;
   top: 20px;
   right: 18px;
@@ -134,8 +134,8 @@
   border-width: 0 0 1px 1px;
   left: 21px;
   bottom: 20px;
-  border-inline-start: 1px solid var(--secondary-color, #ff0070);
-  border-block-end: 1px solid var(--secondary-color, #ff0070);
+  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -151,7 +151,7 @@
 .header-text {
   max-width: 491px;
   background-color: var(--accent-color);
-  color: var(--highlight-color);
+  color: var(--text-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -162,19 +162,16 @@
 }
 
 .main {
-  margin-block-start: 60px;
-  padding: 0px 20px 0px 20px;
+  padding: 58px 20px 0px 20px;
 }
 .section {
+  padding-block-end: 60px;
   gap: 20px;
   display: grid;
   grid-template-columns: clamp(14.75rem, -0.0625rem + 30.8594vw, 19.6875rem) 1fr;
 }
 
-.section-articles {
-  text-align: left;
-  gap: 20px;
-  padding-block-end: 80px;
+.section-articles li {
   margin-block-end: 1.27rem;
 }
 
@@ -182,20 +179,20 @@
   font-family: "IBM Plex mono", monospace;
   font-size: 18px;
   font-weight: 400;
-  line-height: 23px;
   line-height: 23.5px;
   flex-direction: column;
   display: grid;
   color: var(--text-color);
-  gap: 2px;
+  gap: 9px;
 }
 
 .title-list {
-  color: var(--secondary-color);
+  color: var(--accent-color);
   font-style: normal;
   font-size: 18px;
   font-weight: 700;
   max-width: 315px;
+  line-height: 23.5px;
 }
 
 .title-decor {
@@ -206,6 +203,7 @@
   font-weight: 700;
 }
 
+.accent-text,
 .section-title_accent {
   font-size: 18px;
   font-weight: 400;
@@ -215,7 +213,7 @@
 
 .link:hover {
   outline: 0;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--title-color);
 }
 
 .link:focus {
@@ -229,29 +227,27 @@
 .section-low_focus {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .section-low_focus-articles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 .section-advices_focus-articles {
   flex-direction: column;
   gap: 20px;
-  margin-block-start: 20px;
 }
 
 .section-advices_focus-title {
+  margin-block-end: 20px;
   background-color: var(--accent-color);
-
-}
-.text-section {
-  padding-block-end: 20px;
 }
 
-.section-gallery {
-  gap: 20px;
+.sextion-article {
+  color: var (--text-color);
 }
 
 .gallery-lists {
@@ -263,11 +259,9 @@
     "sunset sunset food"
     "cassette books food"
     "cassette road road";
+  gap: 20px;
 }
 
-.gallery-lists:last-child {
-  gap: 25px;
-}
 .title_width {
   grid-column: span 2;
 }
@@ -310,14 +304,19 @@
 }
 
 .shadow-decor:last-child {
-  text-shadow: 2px 2px 0 #ff0070;
+  text-shadow: 2px 2px 0 var(--color-button-purple);
 }
 
-@media (width <= 785px) {
+@media (width < 786px) and (orientation: portrait) {
+  .cover {
+    max-width: 768px;
+    min-height: 100vh;
+  }
+
   .header__theme-menu {
-    padding-inline-end: 15px;
     justify-self: end;
     align-self: center;
+    padding-block-start: 3%;
   }
 
   .header__theme-menu-list {
@@ -334,6 +333,11 @@
   .header-text {
     align-self: center;
     max-width: 364px;
+    margin-block-start: 21%;
+    margin-block-end: 25.1%;
+  }
+  .section-title {
+    gap: 0px;
   }
 
   .title-decor {
@@ -341,7 +345,7 @@
   }
   .accent-text,
   .title-decor {
-    gap: 10px;
+    gap: 0px;
   }
 
   .title-list {
@@ -349,7 +353,6 @@
   }
 
   .section-low_focus {
-    margin: 0;
     display: flex;
     flex-direction: column;
   }
@@ -357,61 +360,81 @@
   .section-low_focus-articles {
     display: flex;
     flex-direction: column;
-    padding-block-start: 0px;
-  }
-
-  .section-advices_focus-articles {
     gap: 0px;
-  }
-  .gallery-lists {
-    margin-block-start: 40px;
   }
 
   .footer-title {
-    text-shadow: 2px 2px 0 var(--accent-color);
+    align-self: center;
+    text-shadow: 2px 2px 0 var(--color-second-purple);
   }
 }
 
-@media (width <= 376px) {
+@media (width < 376px) {
+  .cover {
+    max-width: 375px;
+    min-height: 668px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    padding: 10px 10px 80px 10px;
+  }
+
+  .decorated-zone::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .decorated-zone::after {
+    left: 10px;
+    bottom: 20px;
+  }
+  .header_rec {
+    top: 10px;
+    right: 19px;
+  }
+
   .header__theme-menu {
-    margin-block-start: 53px;
-    margin-inline-end: 14px;
+    align-self: center;
   }
 
   .page-title {
-    font-size: 116px;
+    font-size: clamp(1rem, -35.364rem + 181.818vw, 7.25rem);
     line-height: 95.7px;
-    padding-block-start: 0px;
   }
 
   .header-text {
     max-width: 100%;
-    justify-self: start;
-    margin-inline-end: 15px;
   }
 
-  .cover {
-    padding-inline-start: 10px;
+  .main {
+    margin: 0;
+    padding: 0;
   }
 
   .section {
+    gap: 40px;
+    padding: 0px 10px 0px 10px;
     display: flex;
     flex-direction: column;
+  }
+  .title-list {
+    width: 100%;
+    max-width: 355px;
   }
 
   .section-title {
     margin-block-start: 5px;
-    gap: 20px;
     width: 100%;
   }
   .section-articles {
-    gap: 21px;
   }
   .title-decor {
     width: 100%;
   }
   .section-title_accent {
-    gap: 5px;
+    gap: 7px;
   }
 
   .section-difficult_focus {
@@ -423,18 +446,16 @@
   }
 
   .section-gallery {
-    margin-block-start: 30px;
-    margin-block-end: 100px;
     width: 100%;
   }
 
   .gallery-lists {
     display: flex;
     flex-direction: column;
+    gap: 10px;
   }
 
   .footer {
-    padding-inline-start: 0px;
-    padding-block-end: 20px;
+    align-self: center;
   }
 }
