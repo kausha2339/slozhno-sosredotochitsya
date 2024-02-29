@@ -4,10 +4,10 @@
   max-width: 1024px;
   min-height: 100%;
   height: 100vh;
-  color: var(--brand-color, #f1b2ce);
+  color: var(--brand-color);
   font-family: "IBM Plex mono", monospace;
-  background-color: var(--cover-color, #fff1f7);
-  background-image: var(--page-background-image,  url "../images/cover-image.png",#000028 );
+  background-color: var(--page-background-color);
+  background-image: var(--page-background-image);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -32,7 +32,7 @@
   align-items: center;
   position: absolute;
   z-index: -1;
-  visibility: var(--rec-visibility, hidden);
+  visibility: var(--rec-visibility);
   top: 20px;
   right: 28px;
   gap: 10px;
@@ -41,7 +41,7 @@
 .header_rec::before {
   content: "rec";
   text-transform: uppercase;
-  color: var(--accent-color, #ff0070);
+  color: var(--accent-color);
   line-height: 23.4px;
   display: inline-block;
   font-size: 18px;
@@ -52,8 +52,8 @@
   content: "";
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color, #ff0070);
-  background: var(--accent-color, #ff0070);
+  box-shadow: 0 0 2px 2px var(--accent-color);
+  background: var(--accent-color);
   inline-size: 9px;
   block-size: 9px;
 }
@@ -69,7 +69,7 @@
 }
 
 .shadow-decor {
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 4px 4px 0 var(--shadow-decor);
 }
 
 .header__theme-menu {
@@ -85,7 +85,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  color: var(--secondary-color, #ff0070);
+  color: var(--secondary-color);
   background: transparent;
   cursor: pointer;
 }
@@ -106,7 +106,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-block-end-color: currentColor;
+  border-block-end-color: currentColor var(--secondary-color-dark);
 }
 
 .decorated-zone {
@@ -151,7 +151,7 @@
 .header-text {
   max-width: 491px;
   background-color: var(--accent-color);
-  color: var(--text-color);
+  color: var(--title-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -187,7 +187,7 @@
 }
 
 .title-list {
-  color: var(--accent-color);
+  color: var(--title-accent);
   font-style: normal;
   font-size: 18px;
   font-weight: 700;
@@ -247,7 +247,7 @@
 }
 
 .sextion-article {
-  color: var (--text-color);
+  color: var(--text-color);
 }
 
 .gallery-lists {
@@ -304,7 +304,7 @@
 }
 
 .shadow-decor:last-child {
-  text-shadow: 2px 2px 0 var(--color-button-purple);
+  text-shadow: 2px 2px 0 var(--shadow-decor);
 }
 
 @media (width < 786px) and (orientation: portrait) {
@@ -316,7 +316,7 @@
   .header__theme-menu {
     justify-self: end;
     align-self: center;
-    padding-block-start: 3%;
+   
   }
 
   .header__theme-menu-list {
@@ -326,15 +326,12 @@
   .page-title {
     font-size: clamp(7.25rem, 7.1055rem + 0.6163vw, 7.5rem);
     line-height: 99px;
-    text-shadow: 4px 4px 0 var(--accent-color);
     align-self: end;
   }
 
   .header-text {
     align-self: center;
     max-width: 364px;
-    margin-block-start: 21%;
-    margin-block-end: 25.1%;
   }
   .section-title {
     gap: 0px;
@@ -365,20 +362,23 @@
 
   .footer-title {
     align-self: center;
-    text-shadow: 2px 2px 0 var(--color-second-purple);
   }
 }
 
 @media (width < 376px) {
-  .cover {
-    max-width: 375px;
-    min-height: 668px;
+  .page {
     margin: 0;
-    padding: 0;
+  }
+  .cover {
+    margin: 0;
+    padding-block-start: 10px;
   }
 
   .header {
-    padding: 10px 10px 80px 10px;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    align-items: center;
+    padding: 0.625rem;
   }
 
   .decorated-zone::before {
@@ -388,7 +388,7 @@
 
   .decorated-zone::after {
     left: 10px;
-    bottom: 20px;
+    bottom: 10px;
   }
   .header_rec {
     top: 10px;
@@ -396,7 +396,9 @@
   }
 
   .header__theme-menu {
-    align-self: center;
+    justify-self: end;
+    margin-block-end: 20px;
+  
   }
 
   .page-title {
@@ -404,8 +406,8 @@
     line-height: 95.7px;
   }
 
-  .header-text {
-    max-width: 100%;
+  .header-text  {
+    margin-block-end: 5px;
   }
 
   .main {
@@ -414,35 +416,29 @@
   }
 
   .section {
-    gap: 40px;
-    padding: 0px 10px 0px 10px;
+    margin: 0;
+    gap: 10px;
+    padding: 40px 10px 0px 10px;
     display: flex;
     flex-direction: column;
   }
   .title-list {
+    gap: 20px;
     width: 100%;
     max-width: 355px;
   }
 
   .section-title {
-    margin-block-start: 5px;
     width: 100%;
-  }
-  .section-articles {
   }
   .title-decor {
     width: 100%;
-  }
-  .section-title_accent {
-    gap: 7px;
-  }
-
-  .section-difficult_focus {
+    margin: 0;
     gap: 10px;
   }
 
-  .section-low_focus-articles {
-    gap: 10px;
+  .section-advices_focus-title {
+    margin-block-end: 20px;
   }
 
   .section-gallery {
@@ -456,6 +452,7 @@
   }
 
   .footer {
+    margin-block-start: 27px;
     align-self: center;
   }
 }

@@ -5,28 +5,34 @@
 */
 
 .page.theme_dark {
-  --title-color: var(--color-title-pink, #f1b2ce);
+
+  --title-color: var(--color-dark-black, #000028);
   --brand-color: var(--color-brand-purple, #db00ff);
-  --secondary-color: var(--color-accent-purple, #ff0070);
+  --shadow-decor: var(--color-accent-dark, #ff0070);
+  --secondary-color: var(--color-accent-dark, #ff0070);
   --secondary-color-dark: var(--color-button-purple, #ff007040);
-  --accent-color: var(--color-accent-purple, #ff0070);
-  --highlight-color: var(--color-light-black, #353430);
-  --text-color: var(--color-text-pink,#f1b2ce);
-  --page-background-color: var(--color-light-black,#000028);
+  --accent-color: var(--color-accent-dark, #ff0070);
+  --highlight-color: var(--color-dark-black, #353430);
+  --text-color: var(--color-text-pink, #f1b2ce);
+  --title-accent: var(--color-accent-dark, #ff0070);
+  --page-background-color: var(--color-dark-black,#000028);
   --page-background-image: url("../images/cover-image-dark.png");
-  --rec-visibility: var(--rec-visibility-dark, visible);
+  --rec-visibility: var(--rec-dark-visibility, visible);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --title-color: var(--color-title-pink, #f1b2ce);
+    --title-color: var(--color-dark-black,#000028);
     --brand-color: var(--color-brand-purple, #db00ff);
-    --secondary-color: var(--color-accent-purple, #ff0070);
+    --shadow-decor: var(--color-accent-dark, #ff0070);
+    --secondary-color: var(--color-accent-dark, #ff0070);
     --secondary-color-dark: var(--color-button-purple, #ff007040);
-    --accent-color: var(--color-accent-purple, #ff0070);
+    --accent-color: var(--color-accent-dark, #ff0070);
+    --highlight-color: var(--color-dark-black, #353430);
     --text-color: var(--color-text-pink, #f1b2ce);
-    --page-background-color: var(--color-light-black, #000028);
+    --title-accent: var(--color-accent-dark, #ff0070);
+    --page-background-color: var(--color-dark-black, #000028);
     --page-background-image: url("../images/cover-image-dark.png");
-    --rec-visibility: var(--rec-visibility-dark, visible);
+    --rec-visibility: var(--rec-dark-visibilityvisibility, visible);
   }
 }

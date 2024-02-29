@@ -4,7 +4,7 @@
 
 */
 :root {
-  --cover-color: #fff1f7;
+  --cover-light-color: #fff1f7;
   --color-text-pink: #f1b2ce;
   --color-brand-purple: #db00ff;
   --color-brand-pink: #ffc2e6;
@@ -19,18 +19,19 @@
     
   --page-background-image: url("../images/cover-image.png");
 
-  --page-background-color: #000028;;
-
-  --rec-visibility-light: hidden;
-  --rec-visibility-dark: visible;
-
+  --page-background-color: #000028;
+  --rec-light-visibility: hidden;
+  --rec-dark-visibility: visible;
+/*
    --title-color: var(--color-text-pink, #f1b2ce);
     --brand-color: var(--color-brand-purple, #db00ff);
-    --secondary-color: var(--color-accent-purple, #ff0070);
+    --secondary-color: var(--color-accent-dark, #ff0070);
     --secondary-color-dark: var(--color-button-purple, #ff007040);
-    --accent-color: var(--color-accent-purple, #ff0070);
-    --text-color: var(--color-light-black, #000028);
-    --page-background-color: var(--color-light-black, #000028);
-    --page-background-image: url("../images/cover-image-dark.png");
-    --rec-visibility: var(--rec-visibility-dark, visible);
+    --accent-color: var(--color-accent-dark #ff0070);
+    --text-color: var(--color-dark-black, #000028);
+    --shadow-decor: var(--color-accent-dark, #ff0070);
+    --page-background-color: var(--color-dark-black, #000028);
+    --page-background-image: url("../images/cover-image.png");
+    --rec-visibility: var(--rec-visibility);*/
+    
 }
