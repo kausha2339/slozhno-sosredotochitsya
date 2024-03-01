@@ -339,11 +339,13 @@
   .section-low_focus {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
   .section-low_focus-articles {
     display: flex;
     flex-direction: column;
+    gap: 0px;
   }
 
   .footer-title {
