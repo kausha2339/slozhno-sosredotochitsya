@@ -236,11 +236,6 @@
   gap: 20px;
 }
 
-.section-advices_focus-articles {
-  flex-direction: column;
-  gap: 20px;
-}
-
 .section-advices_focus-title {
   margin-block-end: 20px;
   background-color: var(--accent-color);
@@ -316,7 +311,6 @@
   .header__theme-menu {
     justify-self: end;
     align-self: center;
-   
   }
 
   .header__theme-menu-list {
@@ -333,16 +327,9 @@
     align-self: center;
     max-width: 364px;
   }
-  .section-title {
-    gap: 0px;
-  }
 
   .title-decor {
     width: 100%;
-  }
-  .accent-text,
-  .title-decor {
-    gap: 0px;
   }
 
   .title-list {
@@ -357,7 +344,6 @@
   .section-low_focus-articles {
     display: flex;
     flex-direction: column;
-    gap: 0px;
   }
 
   .footer-title {
@@ -366,16 +352,12 @@
 }
 
 @media (width < 376px) {
-  .page {
-    margin: 0;
-  }
   .cover {
-    margin: 0;
-    padding-block-start: 10px;
+    max-width: 375px;
+    width: 100vw;
   }
 
   .header {
-    height: 100vh;
     grid-template-columns: 1fr;
     align-items: center;
     padding: 0.625rem;
@@ -397,8 +379,7 @@
 
   .header__theme-menu {
     justify-self: end;
-    margin-block-end: 20px;
-  
+    padding-block-end: 20px;
   }
 
   .page-title {
@@ -406,45 +387,52 @@
     line-height: 95.7px;
   }
 
-  .header-text  {
-    margin-block-end: 5px;
+  .header-text {
+    margin-block-end: 0px;
   }
 
   .main {
-    margin: 0;
-    padding: 0;
+    margin-block-start: 40px;
+    padding: 0px;
   }
 
   .section {
     margin: 0;
-    gap: 10px;
-    padding: 40px 10px 0px 10px;
+    padding: 0px 10px 26px 10px;
     display: flex;
     flex-direction: column;
   }
-  .title-list {
-    gap: 20px;
-    width: 100%;
-    max-width: 355px;
-  }
-
-  .section-title {
-    width: 100%;
-  }
-  .title-decor {
-    width: 100%;
+  .section-advices_focus,
+  .section-article,
+  .section-articles,
+  .section-title_accent {
     margin: 0;
+    gap: 0px;
+  }
+  .section-advices_focus {
     gap: 10px;
   }
 
   .section-advices_focus-title {
-    margin-block-end: 20px;
+    margin-block-start: 10px;
+  }
+  .section-title,
+  .title-decor {
+    margin-block-end: 10px;
+  }
+  .section-article {
+    gap: 0px;
   }
 
+  .title-list {
+    max-width: 355px;
+    margin: 0;
+    gap: 0px;
+  }
   .section-gallery {
-    width: 100%;
+    margin: 0;
+    gap: 0px;
   }
-
   .gallery-lists {
     display: flex;
     flex-direction: column;
@@ -452,7 +440,6 @@
   }
 
   .footer {
-    margin-block-start: 27px;
-    align-self: center;
+    margin-block-start: 20px;
   }
 }
