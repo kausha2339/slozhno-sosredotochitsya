@@ -327,7 +327,6 @@
   .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-  
   }
 
   .page-title {
@@ -447,7 +446,7 @@
     gap: 0px;
   }
 
-  .section-advices_focus:last-child  {
+  .section-advices_focus:last-child {
     gap: 0px;
   }
 
